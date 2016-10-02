@@ -10,7 +10,7 @@
         android:layout_width="140dp"
         android:scaleType="fitXY"
         android:layout_height="110dp"
-        android:id="@+id/ivFish"/>
+        android:id="@+id/ivImg"/>
 
 
     <TextView
@@ -20,8 +20,8 @@
         android:text="Small Text"
         android:id="@+id/textSize"
         android:layout_marginLeft="5dp"
-        android:layout_toRightOf="@id/ivFish"
-        android:layout_toEndOf="@id/ivFish"
+        android:layout_toRightOf="@id/ivImg"
+        android:layout_toEndOf="@id/ivImg"
         android:textColor="#666"/>
 
 

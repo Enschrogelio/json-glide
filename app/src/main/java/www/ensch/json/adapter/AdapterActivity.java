@@ -50,14 +50,14 @@ public class AdapterActivity extends RecyclerView.Adapter<RecyclerView.ViewHolde
         // Get current position of item in recyclerview to bind data and assign values from list
         MyHolder myHolder= (MyHolder) holder;
         DataActivity current=data.get(position);
-        myHolder.textSize.setText("Datos: " + current.sizeName);
+        myHolder.textSize.setText("Datos: " + current.Name);
 
         // load image into imageview using glide
 
-        Glide.with(context).load("http://pruebaganagana.esy.es/img/" + current.fishImage)
+        Glide.with(context).load("http://pruebaganagana.esy.es/img/" + current.Image)
                 .placeholder(R.drawable.error)
                 .error(R.drawable.error)
-                .into(myHolder.ivFish);
+                .into(myHolder.ivImg);
 
     }
 
@@ -70,14 +70,14 @@ public class AdapterActivity extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
     class MyHolder extends RecyclerView.ViewHolder{
 
-        ImageView ivFish;
+        ImageView ivImg;
         TextView textSize;
 
 
         // create constructor to get widget reference
         public MyHolder(View itemView) {
             super(itemView);
-            ivFish= (ImageView) itemView.findViewById(R.id.ivFish);
+            ivImg= (ImageView) itemView.findViewById(R.id.ivImg);
             textSize = (TextView) itemView.findViewById(R.id.textSize);
         }
 
