@@ -1,6 +1,8 @@
 package www.ensch.json.adapter;
 
 import android.content.Context;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -44,6 +46,7 @@ public class AdapterActivity extends RecyclerView.Adapter<RecyclerView.ViewHolde
     }
 
     // Bind data
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
 
@@ -51,7 +54,6 @@ public class AdapterActivity extends RecyclerView.Adapter<RecyclerView.ViewHolde
         MyHolder myHolder= (MyHolder) holder;
         DataActivity current=data.get(position);
         myHolder.textSize.setText("Datos: " + current.Name);
-
         // load image into imageview using glide
 
         Glide.with(context).load("http://pruebaganagana.esy.es/img/" + current.Image)
@@ -79,7 +81,7 @@ public class AdapterActivity extends RecyclerView.Adapter<RecyclerView.ViewHolde
             super(itemView);
             ivImg= (ImageView) itemView.findViewById(R.id.ivImg);
             textSize = (TextView) itemView.findViewById(R.id.textSize);
-        }
+                  }
 
     }
 
