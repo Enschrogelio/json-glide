@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     // CONNECTION_TIMEOUT and READ_TIMEOUT are in milliseconds
     public static final int CONNECTION_TIMEOUT = 10000;
     public static final int READ_TIMEOUT = 15000;
-    private RecyclerView mRVFishPrice;
+    private RecyclerView mRV;
     private AdapterActivity mAdapter;
 
     @Override
@@ -150,10 +150,10 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 // Setup and Handover data to recyclerview
-                mRVFishPrice = (RecyclerView)findViewById(R.id.list);
+                mRV = (RecyclerView)findViewById(R.id.list);
                 mAdapter = new AdapterActivity(MainActivity.this, data);
-                mRVFishPrice.setAdapter(mAdapter);
-                mRVFishPrice.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+                mRV.setAdapter(mAdapter);
+                mRV.setLayoutManager(new LinearLayoutManager(MainActivity.this));
 
             } catch (JSONException e) {
                 Toast.makeText(MainActivity.this, e.toString(), Toast.LENGTH_LONG).show();
