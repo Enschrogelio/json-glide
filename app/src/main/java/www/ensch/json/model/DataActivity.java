@@ -6,8 +6,7 @@ package www.ensch.json.model;
 
 public class DataActivity {
 
-    public String fishImage;
-    public String fishName;
-    public String sizeName;
+    public String Image;
+    public String Name;
 
 }

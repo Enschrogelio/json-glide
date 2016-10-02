@@ -144,8 +144,8 @@ public class MainActivity extends AppCompatActivity {
                 for(int i=0;i<jArray.length();i++){
                     JSONObject json_data = jArray.getJSONObject(i);
                     DataActivity fishData = new DataActivity();
-                    fishData.fishImage= json_data.getString("p_img");
-                    fishData.sizeName= json_data.getString("p_name");
+                    fishData.Image= json_data.getString("p_img");
+                    fishData.Name= json_data.getString("p_name");
                     data.add(fishData);
                 }
 
