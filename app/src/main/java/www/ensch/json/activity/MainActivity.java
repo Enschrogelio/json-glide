@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 // Setup and Handover data to recyclerview
-                mRVFishPrice = (RecyclerView)findViewById(R.id.fishPriceList);
+                mRVFishPrice = (RecyclerView)findViewById(R.id.list);
                 mAdapter = new AdapterActivity(MainActivity.this, data);
                 mRVFishPrice.setAdapter(mAdapter);
                 mRVFishPrice.setLayoutManager(new LinearLayoutManager(MainActivity.this));
